@@ -28,8 +28,8 @@ async def version():
     return VERSION
 
 
-@API.post("/md_to_html")
-async def md_to_html(file: UploadFile = File(...)):
+@API.post("/process", tags=["MD To HTML"])
+async def process(file: UploadFile = File(...)):
     temp_file = NamedTemporaryFile(delete=False)
     with temp_file as buffer:
         shutil.copyfileobj(file.file, buffer)
