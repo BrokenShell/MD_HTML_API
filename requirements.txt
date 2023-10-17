@@ -1,0 +1,5 @@
+markdown2
+fastapi
+uvicorn[standard]
+python-multipart
+starlette
